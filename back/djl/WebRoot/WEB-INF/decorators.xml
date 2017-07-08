@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+	<decorator name="web" page="web.jsp">
+		<pattern>/admin/*</pattern>
+		<pattern>/admin/other/maxChat</pattern>
+	</decorator>
+	<excludes>
+		<pattern>/admin/</pattern>
+		<pattern>/admin/index</pattern>
+		<pattern>/admin/login</pattern>
+		<pattern>/admin/complain/modify</pattern>
+		<pattern>/admin/other/about</pattern>
+		<pattern>/admin/other/contact</pattern>
+		<pattern>/admin/other/agree</pattern>
+		<pattern>/admin/other/guide*</pattern>
+		<pattern>/admin/news/show/*</pattern>
+	</excludes>
+</decorators> 

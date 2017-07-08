@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml-body>
+	<db-config>
+		<table-prefix>a2017_test_</table-prefix>
+		<schema-name>xiaheng</schema-name>
+	</db-config>
+	<table name="user" >
+		<column name="userId" type="varchar"></column>
+	</table>
+	
+	
+	<table name="menu" >
+	</table>
+</xml-body>
