@@ -1,0 +1,25 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header table-bg" >
+
+        <div class="tab light-bg">
+            <ul>
+                <li class="  fize18" ng-click="ctrl.changeTab(1)" ng-class="{true:'hover'}[ctrl.type==1]">全部</li>
+                <li class="fize18 " ng-click="ctrl.changeTab(3)" ng-class="{true:'hover'}[ctrl.type==3]">获得明细</li>
+                <li class=" fize18" ng-click="ctrl.changeTab(4)" ng-class="{true:'hover'}[ctrl.type==4]">提现明细</li>
+            </ul>
+        </div>
+        <page-plugin  refresher="" page-load="ctrl.showRecord(json)" infinite-scroll="" page-data="ctrl.list"  handle="redpacketRe_handle">
+        <div class="list">
+            <div class="item item-divider light-bg item-borderless" style="background-color: #F4F4F4 "><span>日期</span><span class="fl_r">金额</span></div>
+            <div class="list-item item-text-wrap">
+                <a class="item" ng-repeat="x in ctrl.list">
+                    <h2 class=" fize16 gray30" ng-if="x.type==3">领取红包<span class="color1 fl_r" style="color: #E04F4A">+{{x.money}}</span></h2>
+                    <h2 class=" fize16 gray30" ng-if="x.type==4">提现<span class="color1 fl_r" style="color: #E04F4A">-{{x.money}}</span></h2>
+                    <h2 class="fize15 pt5 gray60">{{x.time}}</h2>
+                </a>
+
+            </div>
+        </div>
+    </page-plugin>
+    </ion-content>
+</ion-view>

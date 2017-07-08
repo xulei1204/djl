@@ -1,0 +1,63 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header ">
+        <div class="list m-1 mt10">
+            <a class="item item-icon-left pr40 b0 m0 bdtop item-icon-right p6" href="#">
+                <i class="icon icon-address-a fize16 pl5">视频</i>
+                <span style="color:#999; height:36px;float:right;line-height : 36px;"></span>
+                <i class="icon ion-ios-arrow-right fize16"></i>
+            </a>
+            <label class="item item-input">
+                <span class="input-label" style="width: 20% !important">标题</span>
+                <input type="text" placeholder="请输入信息标题">
+            </label>
+            <label class="item item-input item-icon-right mt10 pr40"  ng-click="main.pageJump('Puxzcs')">
+                <span class="input-label" style="width: 20% !important">投放区域</span>
+                <input type="password" placeholder="请选择投放城市">
+                <i class="icon ion-ios-arrow-right fize16"></i>
+            </label>
+        </div>
+        <div class="areatext">
+            <textarea class="textarea" placeholder="请输入内容"></textarea>
+            <div style="margin: 6% 0% 4%;">
+                <div class="areavideo"><img src="images/video.png" style="width: 27px">
+                </div>
+            </div>
+        </div>
+        <div style="border-top: 1px solid;padding: 7px 7px 12px;;background-color: #FFF">
+            <img src="images/location.png" style="width: 15px;position: relative;top: 5px;">
+            <span>所在位置</span>
+            <i class="icon ion-ios-arrow-right fize16 fl_r" style="position: relative;top: 6px;"></i>
+            </label>
+        </div>
+        <button class="button w-90 button-positive bth40 jz fize16 bor5" style="background-color: #DA251C;color:#FAE9E8;margin-top: 50px !important"  ng-click="main.pageJump('Puszhb')">下一步</button>
+    </ion-content>
+</ion-view>
+<style type="text/css">
+.p6 {
+    padding: 6px
+}
+
+.areatext {
+    background-color: #FFF;
+    height: 220px;
+    margin-top: 10px;
+    padding: 3%;
+}
+
+.areavideo {
+    padding: 6% 5%;
+    width: 62px;
+    height: 60px;
+    border: 1px solid #E2E2E2;
+}
+
+.area3 {
+    height: 16%;
+    border-top: 1px solid #E2E2E2;
+}
+
+.textarea {
+    height: 55%;
+    width: 100%;
+}
+</style>

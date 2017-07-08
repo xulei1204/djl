@@ -1,0 +1,30 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header ma20" >
+        <div style="color:#e60000;line-height : 20px;">
+            <br/>
+            <bn/>
+        </div>
+        <div class="item-input-inset text-center ml10 mr10" style="padding:0;height:33px;border-radius:16px;">
+            <input type="search" style="background-color: white;width:100% !important;padding-left: 20px !important" placeholder="请输入您需要的信息" ng-model="ctrl.keyword">
+            <button class="button button-positive" ng-click="ctrl.searchAd()">
+                <i class="icon ion-ios-search" style="color: #999999"></i>
+            </button>
+        </div>
+        <page-plugin  refresher="" page-load="ctrl.ADList(json)" infinite-scroll="" page-data="ctrl.list"  handle="classify_handle">
+        <div class="article mb30" style="background-image: url({{x.cover|httpNoImg}})" ng-click="main.pageJump('djlxq',{'id':x.id})" ng-repeat="x in ctrl.list">
+            <p class="evaluate">{{x.title}}</p>
+            <div class="articlep">
+                <div class="rmjx_name text-left"> <img src="{{x.headpic|httpNoImg}}" style="width:20px;" class=" br50 mr10 fl_l">
+                    <label class="">{{x.nickname}}
+                    <p class="m0 fl_r articleinfo"><img src="images/pl01.png" class="a</label>rticleinfonum" >{{x.commentNum}}</p>
+                         <p class="m0 fl_r articleinfo "><img src="images/zan01.png " class="articleinfonum " >{{x.zanNum}}</p>
+                    <p class="m0 fl_r articleinfo"><img src="images/ydl01.png" class="articleinfonum" >{{x.lookNum}}</p>
+            </div>
+            </div>
+        </div>
+            <div ng-if="ctrl.list.length==0" style="text-align: center;padding-top: 50px">没有符合条件的结果</div>
+            </page-plugin>
+
+    </ion-content>
+</ion-view>
+

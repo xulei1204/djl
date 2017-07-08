@@ -1,0 +1,40 @@
+<ion-view>
+<style type="text/css">
+.choujbg {
+    width: 100%;
+    margin: 64px 0 20px;
+    height: 100%;
+    background-image: url(images/red_bg.jpg);
+    background-size: 100%;
+}
+
+.chak {
+    padding: 5 0 5 88;
+    font-size: 12px;
+    font-family: simHei;
+}
+
+.zhongj {
+    float: right;
+    margin-right: 10;
+    color: #E15C27;
+}
+
+.zjzl {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 63%;
+    font-family: simHei;
+    color: #FAD8D8;
+}
+</style>
+    <div class="choujbg">
+        <div class="chak"><a ng-click="main.pageJump('phbgz')">查看红包规则&nbsp</a><i class="icon ion-chevron-right"></i>
+            <a class="zhongj" ng-click="main.pageJump('pzjhg')">中奖回顾</a></div>
+        <div class="zjzl">很遗憾为中奖，下次加油！再接再厉！</div>
+        <div style="position: absolute;width: 100%;text-align: center;bottom:18%;color: #FAD8D8;">您本月还有<span style="color: red">0</span>次抽奖机会</div>
+    </div>
+</ion-view>
+
+

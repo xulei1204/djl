@@ -1,0 +1,12 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header table-bg" ng-init="ctrl.getUserInfo()">
+        <div class="list mb30" style="margin-top:5%">
+            <label class="item item-input">
+                <span class="input-label" style="width: 20% !important">请输入新昵称</span>
+                <input type="text" value="{{ctrl.userInfo.nickname}}" ng-model="ctrl.nickname">
+            </label>
+        </div>
+        <button class="button w-90 button-positive bth40 jz fize16 bor5 mt10" style="background-color: red;color:white" ng-click="ctrl.updateNickname()" >保存</button>
+    </ion-content>
+    </body>
+</ion-view>

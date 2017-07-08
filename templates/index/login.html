@@ -1,0 +1,60 @@
+<ion-view>
+    <ion-content class="login_bg1" style="height: 100%;" ng-init="obj={};main.routeAttrs.headType='';main.tabsType='';main.tabsName=''">
+        <div class="djlsp2">
+            <img src="images/index_logo.png" style="width: 100%" ng-init="obj={tel:'15996313124',password:'123456'}">
+        </div>
+        <div class="item-input" style="background-color: #F2A344;width: 76%;height: 40px;border-radius: 20px; margin:5% 12% !important">
+            <img src="images/phone.png" style="width: 25px;">
+            <input type="text" class="pl20 pr20" placeholder="手机号" ng-model="obj.tel"/>
+        </div>
+        <div class="item-input" style="background-color: #F2A344;width: 76%;height: 40px;border-radius: 20px; margin:5% 12% !important">
+            <img src="images/lock.png" style="width: 25px;">
+            <input type="password" class="pl20 pr20" placeholder="密码" ng-model="obj.password" />
+        </div>
+        <form style="text-align: center;" ng-init="denglutype='yonghu'">
+            <label class="ma15_" style="color: #F24A23">
+                <input type="radio"  value="1" ng-model="obj.type" ng-checked="true"/>用户</label>
+            <label class="ma15_" style="color: #F24A23">
+                <input type="radio"  value="2" ng-model="obj.type" />业主</label>
+        </form>
+        <div style="margin:60px auto 45px;width:65%">
+            <img src="images/register.png" style="width: 100%;">
+        </div>
+        <div style="width: 80%;margin:5% 12% !important">
+            <a class="zhuc1" ng-click="main.pageJump('register')">注册</a>
+            <a  class="dengl1" ng-click="login(obj)">登录</a>
+        </div>
+        <span style="color: #FFF;position: absolute;right: 70px;">忘记密码?</span>
+    </ion-content>
+    <style type="text/css">
+    .djlsp2 {
+        margin: 33% auto 10%;
+        width: 160px;
+    }
+    
+    .zhuc1 {
+        border: 1px solid white;
+        padding: 10px 40px;
+        margin: 18px;
+        border-radius: 20px;
+        color: #FCF0F0
+    }
+    
+    .dengl1 {
+        padding: 10px 40px;
+        margin: 4%;
+        border-radius: 20px;
+        width: 100px;
+        background-color: #DA251D;
+        color: #FCF0F0
+    }
+    
+    .yanzm {
+        font-size: 12px;
+        height: 25px;
+        padding: 3px 0px 0px 15px;
+        border-left: 1px solid #fff;
+        color: #fff;
+    }
+    </style>
+</ion-view>

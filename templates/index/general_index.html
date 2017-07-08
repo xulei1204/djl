@@ -1,0 +1,25 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header" style="background-color: #FFF" ng-init="showBanner();keyword=''">
+        <div style="text-align:center;margin-top: 70px">
+            <img src="images/index_logo.png" style="width: 150px;">
+            <div class="item-input" style="padding: 0px; margin:0px 10px">
+                <div class="item-input-wrapper" style="margin-top: 70px;padding-right: 0px;"> <i class="icon ion-ios-search placeholder-icon fize26"></i>
+                    <input type="search" ng-model="keyword">
+                    <button class="button" style="background-color: #DA251E;color:white;width: 90px;height: 40px !important;border-radius: 0px;" ng-click="main.pageJump('search',{'keyword':keyword})">点就乐</button>
+                </div>
+            </div>
+        </div>
+
+        <div style="-webkit-transform:translate3d(0,0,0);" >
+            <div style="visibility: visible;"  class="box_swipe">
+                <ion-slide-box  auto-play="true" does-continue="true" slide-interval="1000"
+                                show-pager="true" delegate-handle="banner_handle">
+                    <ion-slide ng-repeat="x in banner">
+                        <img ng-src="{{x.pic|httpNoImg}}" style="width:100%;margin-top:50px;">
+                    </ion-slide>
+
+                </ion-slide-box>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

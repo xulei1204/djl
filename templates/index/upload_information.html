@@ -1,0 +1,91 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header ma20">
+        <div class="tip">
+            <p>上传营业执照</p>
+        </div>
+        <div class="tip2">
+            <p>证件有效期内，需证件清晰，信息全部展示</p>
+        </div>
+        <div class="certificate">
+            <div class="certificatep">
+                <img class="add" src="images/add_pic.png" id="license"></div>
+            <div class="certificatebutton" onclick="javascrpt:$('#filea').click()">点击上传</div>
+            <input style="display:none"onChange="angular.element(this).scope().img_upload(this.files,'license')"  type="file"  id="filea">
+
+        </div>
+        <div class="tip">
+            <p>上传身份证照片（正面）</p>
+        </div>
+        <div class="tip2">
+            <p>证件有效期内，需证件清晰，信息全部展示</p>
+        </div>
+        <div class="certificate">
+            <div class="certificatep">
+                <img  src="images/add_pic.png" class="add" id="idcardA">
+
+            </div>
+            <div class="certificatebutton" onclick="javascrpt:$('#fileb').click()">点击上传</div>
+            <input style="display:none" onChange="angular.element(this).scope().img_upload(this.files,'idcardA')"  type="file"  id="fileb">
+
+        </div>
+        <div class="tip">
+            <p>上传身份证（反面）</p>
+        </div>
+        <div class="tip2">
+            <p>证件有效期内，需证件清晰，信息全部展示</p>
+        </div>
+        <div class="certificate">
+            <div class="certificatep">
+                <img class="add" src="images/add_pic.png" id="idcardB"></div>
+            <div class="certificatebutton" onclick="javascrpt:$('#filec').click()">点击上传</div>
+            <input style="display:none" onChange="angular.element(this).scope().img_upload(this.files,'idcardB')"  type="file"  id="filec">
+        </div>
+        <button class="button w-90 button-positive bth40 jz fize16 bor5" style="background-color: #DA251C;color:#FAE9E8;margin-top: 50px !important"  ng-click="main.pageJump('register')">完成</button>
+    </ion-content>
+</ion-view>
+<style type="text/css">
+.tip {
+    margin: 15px 15px 0;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.tip2 {
+    margin: 8px 15px 0;
+    font-size: 12px;
+    color: #959595;
+}
+
+.certificate {
+    margin: 15px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding-top: 8%
+}
+
+.certificatep {
+    margin: 0px auto 8%;
+    width: 60%;
+    height: 65%;
+}
+
+.certificatebutton {
+    height: 18%;
+    background-color: #B9B9B9;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
+    padding: 3%;
+    color: #fff;
+}
+
+.add {
+    width: 12%;
+    margin: 18% 44%;
+}
+
+.idcard {
+    width: 100%;
+    height: 130px;
+}
+</style>

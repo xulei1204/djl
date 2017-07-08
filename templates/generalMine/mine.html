@@ -1,0 +1,84 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header table-bg has-footer" ng-init="ctrl.getUserInfo()">
+        <div class="wd_top" style=" background:url(images/glzx_bg.png) no-repeat; background-size:100%; position:relative;">
+            <div class="tx" style="padding: 20px 20px 20px 20px;">
+                <div class="tx_fl">
+                    <img ng-click="main.pageJump('mzhzl')" ng-src="{{ctrl.userInfo.pic|httpNoImg}}" style="width:60px; height:60px;">
+                    <h5 class="bark fize15" style="margin:0px;"><b style=" color:#333; line-height:40px;">{{ctrl.userInfo.nickname}}</b></h5>
+                </div>
+            </div>
+        </div>
+        <div class="list-item light-bg wd">
+            <div class="row text-center ">
+                <div class="col-33">
+                    <a ng-click="main.pageJump('mhbjl')" class="item item-borderless padding">
+                        <img src="images/xxmx.png" style="width: 20px;">
+                        <p class="fize15 gray40">红包记录</p>
+                    </a>
+                </div>
+                <div class="col-33">
+                    <a class="item item-borderless padding">
+                        <h1 class="mb0" style="height:20px;color: red;font-family:圆体;font-size: 20px">{{ctrl.userInfo.money}}</h1>
+                        <p class="fize15 gray40">余额</p>
+                    </a>
+                </div>
+                <div class="col-33">
+                    <a ng-click="main.pageJump('mhbtx')" class="item item-borderless padding">
+                        <img src="images/zhcz.png" style="width: 20px;">
+                        <p class="fize15 gray40">提现</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt10"></div>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('mwdsy')">
+            <img src="images/wd01.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20" style="line-height:30px !important;">我的收益</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <a class="item item-icon-right  pt10 pb10" ng-click="main.pageJump('mwdyhk')">
+            <img src="images/wd02.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20" style="line-height:30px !important;">我的银行卡</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <a class="item item-icon-right  pt10 pb10" ng-click="main.pageJump('mwdyhk')">
+            <img src="images/wd10.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20" style="line-height:30px !important;">余额转账</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <div class="mt10"></div>
+        <a class="item item-icon-right  pt10 pb10" ng-click="main.pageJump('browseHistory')">
+            <img src="images/wd11.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20" style="line-height:30px !important;">我的浏览记录</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <div class="mt10"></div>
+        <a class="item item-icon-right mt10 pt10 pb10" ng-click="main.pageJump('mappewm')">
+            <img src="images/wd03.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">下载APP二维码</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('mgnjs')">
+            <img src="images/wd04.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">功能介绍</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('mts')">
+            <img src="images/wd05.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">投诉与意见</span> <i class="icon ion-ios-arrow-right fize20 right0"></i>
+        </a>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('mbzyfk')">
+            <img src="images/wd07.png " class="display fl_l tubiao " />
+            <span class="pl10 wryh gray20 span1 ">帮助与反馈</span> <i class="icon ion-ios-arrow-right fize20 right0 "></i> </a>
+        <a class="item item-icon-right pt10 pb10 " ng-click="main.pageJump( 'djlfxwd') ">
+            <img src="images/wd08.png " class="display fl_l tubiao " />
+            <span class="pl10 wryh gray20 span1 ">分享</span> <i class="icon ion-ios-arrow-right fize20 right0 "></i> </a>
+        <div class="mt10 "></div>
+        <a class="item item-icon-right pt10 pb10 " ng-click="main.pageJump( 'login') ">
+            <img src="images/wd09.png " class="display fl_l tubiao " />
+            <span class="pl10 wryh gray20 span1 ">退出</span> <i class="icon ion-ios-arrow-right fize20 right0 "></i> </a>
+    </ion-content>
+<style type="text/css">
+.tubiao {
+    max-width:30px !important;
+    max-height:30px !important;
+}
+.span1 {
+    line-height:30px !important;
+}
+.money {
+    position: absolute;
+    right: 8%;
+    top: 28%;
+    color: #E25E59;
+}
+</style>
+</ion-view>

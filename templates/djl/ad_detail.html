@@ -1,0 +1,106 @@
+<ion-view >
+        <ion-content class="scroll-content ionic-scroll  has-header ma20" ng-init="AdDetail();recordHistory()">
+            <div style="background-color: #FFF">
+                <div style="margin: 0px 1% 8%;padding-top: 5px;">
+                    <h4 class="hh">{{detail.title}}</h4>
+                    <h6 class="hh color1">{{detail.nickname}}</h6>
+                    <label class="fl_l color1">{{detail.time}}</label>
+                    <label class="fl_r color1"><img src="images/ydl01.png" style="width: 20px;vertical-align:middle;margin-right: 4px;" />{{detail.lookNum}}</label>
+                </div>
+                <div style="margin:2%;padding-bottom:10px;">
+                    <video-play ng-if="detail.video!=''" video-src="detail.video"
+                                style="background-color: #EBEBEB"></video-play>
+                    <p class="maintext"  ng-bind-html="detail.content"></p>
+
+                    <img src="images/down.png" style="display:block; margin:auto;width: 20px;">
+                    <a ng-click="clickRedpacket(1)"><img src="images/red02.png" style="display:block; margin:auto;width: 80px;margin-top: 20px;"></a>
+                </div>
+            </div>
+            <div style="color: #AAAAAA;background-color: #FFF">
+                <div style="width: 84px;border-bottom: 1px solid #E87B76;margin: 10px 0px 0px 10px;padding: 5 0;">
+                    <p>下三篇信息：</p>
+                </div>
+                <div class="nextarticle" ng-if="detail.next.length==0">
+                    <p class="nextarticlep">没有了</p>
+                </div>
+                <div class="nextarticle" ng-click="main.pageJump('djlxq',{'id':x.id})" ng-repeat="x in detail.next">
+                    <p class="nextarticlep">{{x.title}}</p>
+                </div>
+
+            </div>
+            <div style="height: 50px"></div>
+        </ion-content>
+        <div class="tabs tabs-icon-left">
+            <a class="tab-item" style="border-right: 1px solid #EEEEEE;padding-right: 9%;">
+                <img src="images/zan.png" style="width: 15%">
+                <b style="font-size: 18px;margin: 0 12;">{{detail.zanNum}}</b>
+            </a>
+            <a class="tab-item" ng-click="main.pageJump( 'djlpl',{'id':detail.id})" style="padding-left: 9%;">
+                <img src="images/pl.png" style="width: 15%">
+                <b style="font-size: 18px;margin: 0 12;">{{detail.commentNum}}</b>
+            </a>
+        </div>
+
+    <div ng-if="open" ng-click="clickRedpacket(1)" style="background:rgba(0,0,0,0.5);position:fixed; bottom:0; left:0px; width:100%; height:100%;z-index:2; overflow:hidden;" >
+        <img ng-click="main.pageJump('djlxq')" class="fl_r" style="width: 30px;margin: 10px;position:relative;top:60px;" src="images/close.png">
+        <div style="position: absolute;top: 120px;">
+            <div style="color: #FEEEEE;position: absolute;top: 12%;text-align: center;margin: 0 auto;width: 105%;font-size: 17px;">读完我后可领红包</div>
+            <div ng-click="receiveRedpacket()" style="position: absolute;color: #BD8E01;top: 28%;font-size: 45px;width: 105%;text-align: center;">拆</div>
+            <img src="images/red01.png" style="width: 100%;">
+         </div>
+
+
+    </div>
+    <div ng-click="clickRedpacket(2)"  ng-if="showTip==2" style="background:rgba(0,0,0,0.5);position:fixed; bottom:0; left:0px; width:100%; height:100%;z-index:2; overflow:hidden;" >
+
+    <div style="position: absolute;top: 200px; ">
+        <div style="color: #d97c00;position: absolute;bottom:21px;text-align: center;margin: 0 auto;width: 105%;font-size: 17px;">很遗憾！与红包擦肩而过</div>
+        <div ng-click="" style="position: absolute;color: #BD8E01;top: 28%;font-size: 40px;width: 100%;text-align: center;">0元</div>
+        <img src="images/hb_bg.png" style="width: 100%;">
+    </div>
+    </div>
+    <div  ng-click="clickRedpacket(2)" ng-if="showTip==1" style="background:rgba(0,0,0,0.5);position:fixed; bottom:0; left:0px; width:100%; height:100%;z-index:2; overflow:hidden;" >
+    <div style="position: absolute;top: 200px;">
+        <div style="color: #d97c00;position: absolute;bottom:21px;text-align: center;margin: 0 auto;width: 105%;font-size: 17px;">恭喜获得红包！</div>
+        <div ng-click="" style="position: absolute;color: #BD8E01;top: 28%;font-size: 40px;width: 100%;text-align: center;">{{redpacket.money}}元</div>
+        <img src="images/hb_bg.png" style="width: 100%;">
+    </div>
+        </div>
+
+</ion-view>
+<style type="text/css">
+.maintext {
+    color: #8F8F8F;
+    line-height: 1.5em;
+    text-indent: 2em;
+}
+
+.hh {
+    text-align: center;
+    margin-top: 10px !important;
+}
+.prp {
+    border-radius: 14px;
+    width: 25px;
+    vertical-align: middle;
+    position: relative;
+    bottom: 2px;
+}
+
+.color1 {
+    color: #8F8F8F;
+}
+
+.nextarticle {
+    margin: 0px 10px;
+    border-top: 1px solid #E7E7E7;
+    padding: 7px 25px 7px 0;
+}
+
+.nextarticlep {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #333333;
+}
+</style>

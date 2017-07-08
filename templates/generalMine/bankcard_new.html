@@ -1,0 +1,38 @@
+<ion-view>
+ <ion-content class="scroll-content ionic-scroll  has-header table-bg" >
+
+  <div style="color:#808080;line-height : 36px;padding-left:8px">
+    <span>请绑定持卡人本人的银行卡</span>
+  </div>
+  <div class="list mb50">
+    <label class="item item-input" >
+      <span class="input-label" style="width: 20% !important">持卡人</span>
+      <input type="text" ng-model="ctrl.name" placeholder="请输入姓名">
+    </label>
+    
+    <label class="item item-input">
+      <span class="input-label" style="width: 20% !important">卡号
+      </span>
+      <input type="text" ng-model="ctrl.code" placeholder="请输入银行卡号">
+     </label>
+
+      <div class="item item-input item-select addCode">
+          <div class="input-label">
+              选择银行
+          </div>
+          <div class="input-label" ng-click="ctrl.goChooseBank()">
+              <p ng-if="!ctrl.choosedBank">请选择银行<p>
+              <p ng-if="ctrl.choosedBank">{{ctrl.choosedBank.bankName}}<p>
+
+          </div>
+          <span><i class="icon ion-ios-arrow-right"></i></span>
+      </div>
+  </div>
+
+
+  <button class="button w-90 button-positive bth40 jz fize16 bor5 mt10" style="background-color: red;color:white"  ng-click="ctrl.submit()" >完成</button>
+
+
+</ion-content>
+
+</ion-view>

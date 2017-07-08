@@ -1,0 +1,47 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header has-footer" ng-init="ctrl.bankList()">
+
+
+        <a  class="item item-icon-left pr10 b0 m0 bdbt90 item-icon-right" ng-click="ctrl.clickBank(x)" ng-repeat="x in ctrl.bank track by $index">
+            <i class="icon icon-address-a fize16">{{x.bankName}}</i>
+            <span style="color:#999; height:36px; float:right"> </span>
+            <i class="icon ion-ios-arrow-right fize16"></i>
+        </a>
+    </ion-content>
+    <style type="text/css">
+        .areap {
+            background-size: 100%;
+            height: 135px !important;
+            margin: 3% 3%;
+            border-radius: 10px;
+        }
+
+        .area4 {
+            height: 22%;
+            background-color: #FFF;
+            position: relative;
+            top: 78%;
+            border-radius: 0 0 10px 10px;
+            padding: 6px;
+        }
+
+        .text1 {
+            font-size: 8px;
+            width: 40px;
+        }
+
+        .text2 {
+            width: 15px;
+            position: relative;
+            top: 3px;
+            right: 4px;
+        }
+
+        .text3 {
+            position: relative;
+            top: 14px;
+            left: 10px;
+            color: #999;
+        }
+    </style>
+</ion-view>

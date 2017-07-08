@@ -1,0 +1,14 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header ma20">
+        <page-plugin  refresher="" page-load="headlineList(json)" infinite-scroll="" page-data="list"  handle="">
+            <div class="list">
+                <a class="item item-thumbnail-left" ng-click="main.pageJump('djllbxxxq',{'id':x.id})" style="margin:4% 3%" ng-repeat="x in list">
+                    <img ng-src="{{x.pic|httpNoImg}}" />
+                    <h2 class="fize16">{{x.title}}<span class=" fl_r fize10" style="color: #A7A7A7">{{x.addTime}}</span></h2>
+                    <p class=" mt20">{{x.intro}}</p>
+                </a>
+
+            </div>
+        </page-plugin>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,149 @@
+<style type="text/css">
+.bottomarea {
+    position: fixed;
+    height: 70%;
+    width: 100%;
+    bottom: -190px;
+}
+
+.fenxarea {
+    background-color: #F6F6F6;
+    height: 52%;
+    width: 96%;
+    position: absolute;
+    left: 2%;
+    bottom: 56%;
+    border-radius: 10px;
+    padding-top: 6%;
+}
+
+.fenx {
+    width: 18%;
+    display: inline-block;
+    margin: 0 7% 0;
+}
+
+.share {
+    padding: 2% 0% 35%;
+    text-align: center;
+    font-size: 10px;
+}
+
+.quxiao {
+    height: 8%;
+    width: 96%;
+    background-color: #F6F6F6;
+    position: absolute;
+    left: 2%;
+    bottom: 46%;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.tubiao {
+    max-width: 30px !important;
+    max-height: 30px !important
+}
+
+.span1 {
+    line-height: 30px !important;
+}
+
+.money {
+    position: absolute;
+    right: 8%;
+    top: 28%;
+    color: #E25E59;
+}
+</style>
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header table-bg has-footer">
+        <div class="wd_top" style=" background:url(images/glzx_bg.png) no-repeat; background-size:100%; position:relative;">
+            <div class="tx" style="padding: 20px 20px 20px 20px;">
+                <div class="tx_fl">
+                    <img src="images/tx02.jpg" style="width:60px; height:60px;" ng-click="main.pageJump('mazhzl')">
+                    <h5 class="bark fize15" style="margin:0px;"><b style=" color:#333; line-height:40px;">嘟嘟宝宝</b></h5>
+                </div>
+            </div>
+        </div>
+        <div class="list-item light-bg wd">
+            <div class="row text-center ">
+                <div class="col-33">
+                    <a ng-click="main.pageJump('maxfmx')" class="item item-borderless padding" href="hbjl.html">
+                        <img src="images/xxmx.png" style="width: 20px;">
+                        <p class="fize15 gray40">消费明细</p>
+                    </a>
+                </div>
+                <div class="col-33">
+                    <a class="item item-borderless padding">
+                        <h1 class="mb0" style="height:20px;color: red;font-family:圆体;font-size: 20px">16.00</h1>
+                        <p class="fize15 gray40">余额</p>
+                    </a>
+                </div>
+                <div class="col-33">
+                    <a ng-click="main.pageJump('mazhcz')" class="item item-borderless padding">
+                        <img src="images/zhcz.png" style="width: 20px;">
+                        <p class="fize15 gray40">账户充值</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt10"></div>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('mamrxfmx')">
+            <img src="images/glzx01.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">每日消费金额</span>
+            <span class="money">120.00</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <div class="mt10"></div>
+        <a class="item item-icon-right mt10 pt10 pb10" ng-click="main.pageJump('maewm')">
+            <img src="images/wd03.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">下载APP二维码</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('magnjs')">
+            <img src="images/wd04.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">功能介绍</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('mats')">
+            <img src="images/wd05.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">投诉</span> <i class="icon ion-ios-arrow-right fize20 right0"></i>
+        </a>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('majcxbb')">
+            <img src="images/wd06.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">检查新版本</span> <i class="icon ion-ios-arrow-right fize20 right0"></i>
+        </a>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('mabzyfk')">
+            <img src="images/wd07.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">帮助与反馈</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <a class="item item-icon-right pt10 pb10" ng-click="main.pageJump('mafx')">
+            <img src="images/wd08.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">分享</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+        <div class="mt10"></div>
+        <a class="item item-icon-right pt10 pb10" href="#">
+            <img src="images/wd09.png" class="display fl_l tubiao" />
+            <span class="pl10 wryh gray20 span1">退出</span> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+    </ion-content>
+    <div style="background:rgba(0,0,0,0.5);position:fixed; bottom:0; left:0px; width:100%; height:100%;z-index:2; overflow:hidden">
+        <div class="bottomarea">
+            <div class="fenxarea">
+                <div class="fenx"><img style="width: 100%" src="images/share01.png">
+                    <div class="share">新浪微博</div>
+                </div>
+                <div class="fenx"><img style="width: 100%" src="images/share02.png">
+                    <div class="share">微信好友</div>
+                </div>
+                <div class="fenx"><img style="width: 100%" src="images/share03.png">
+                    <div class="share">QQ</div>
+                </div>
+                <div class="fenx"><img style="width: 100%" src="images/share04.png">
+                    <div class="share">微信朋友圈</div>
+                </div>
+                <div class="fenx"><img style="width: 100%" src="images/share05.png">
+                    <div class="share">QQ空间</div>
+                </div>
+                <div class="fenx"><img style="width: 100%" src="images/share06.png">
+                    <div class="share">复制网址</div>
+                </div>
+            </div>
+            <div class="quxiao" ng-click="main.backRoute()">
+                <div style="margin: 2%;font-size: 18px;color: #DD3832">取消</div>
+            </div>
+        </div>
+    </div>
+</ion-view>

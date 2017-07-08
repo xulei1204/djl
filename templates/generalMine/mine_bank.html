@@ -1,0 +1,83 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header table-bg" ng-init="ctrl.myBankcard()">
+
+
+        <div class="yhk1" ng-repeat="x in ctrl.list">
+            <div class="yhktb1"><img src="{{x.pic|httpNoImg}}" style="width: 100%"></div>
+            <div class="yhkname">{{x.bankName}}</div>
+            <div class="yhktype">储蓄卡</div>
+            <div class="yhknumb">{{x.code}}</div>
+            <div class="paytype">快捷支付</div>
+        </div>
+        <div ng-if="!ctrl.list" style="text-align: center;padding-top: 20px"><p style="">您还没有绑定银行卡</p></div>
+    </ion-content>
+    <style type="text/css">
+        .yhk1 {
+            height: 15%;
+            background-color: #E9576E;
+            margin: 5% 3%;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        .yhk2 {
+            height: 15%;
+            background-color: #37C0AE;
+            margin: 5% 3%;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .yhktb1 {
+            border-radius: 50px;
+            width: 35px;
+            height: 35px;
+            background-color: #F5BDC4;
+            position: relative;
+            top: 13px;
+            left: 15px;
+        }
+
+        .yhktb2 {
+            border-radius: 50px;
+            width: 35px;
+            height: 35px;
+            background-color: #AFE7DA;
+            position: relative;
+            top: 13px;
+            left: 15px;
+        }
+
+        .yhkname {
+            position: relative;
+            top: -28px;
+            left: 65px;
+            color: #fff;
+        }
+
+        .yhktype {
+            position: relative;
+            top: -28px;
+            left: 65px;
+            color: #fff;
+            font-size: 8px;
+        }
+
+        .yhknumb {
+            position: absolute;
+            bottom: 0px;
+            left: 65px;
+            color: #fff;
+        }
+
+        .paytype {
+            position: absolute;
+            top: 8px;
+            right: 8%;
+            color: #fff;
+            font-size: 13px;
+            font-style: italic;
+        }
+    </style>
+</ion-view>
+

@@ -1,0 +1,67 @@
+<ion-view>
+    <ion-content class="login_bg1" style="height: 100%" ng-init="obj={}">
+        <div class="djlsp2">
+            <img src="images/index_logo.png" style="width: 100%">
+        </div>
+        <div class="item-input" style="background-color: #F2A344;width: 76%;height: 40px;border-radius: 20px; margin:5% 12% !important">
+            <img src="images/phone.png" style="width: 25px;">
+            <input type="text" class="pl20 pr20" placeholder="手机号" ng-model="obj.tel" />
+        </div>
+        <div class="item-input" style="background-color: #F2A344;width: 76%;height: 40px;border-radius: 20px; margin:5% 12% !important">
+            <img src="images/safe.png" style="width: 25px;">
+            <div style="width: 150px">
+                <input type="text" class="pl20 pr20" placeholder="验证码" ng-model="obj.code" />
+            </div>
+            <div class="yanzm" ng-click="sendCodeForRe(obj)">获取验证码</div>
+        </div>
+        <div class="item-input" style="background-color: #F2A344;width: 76%;height: 40px;border-radius: 20px; margin:5% 12% !important">
+            <img src="images/lock.png" style="width: 25px;">
+            <input type="password" class="pl20 pr20" placeholder="密码" ng-model="obj.password" />
+        </div>
+        <form style="text-align: center;">
+            <label class="ma15_" style="color: #F24A23">
+                <input name="denglu" type="radio" ng-value="1" ng-model="obj.type" />用户 </label>
+            <label class="ma15_" style="color: #F24A23">
+                <input name="denglu" type="radio" ng-value="2" ng-model="obj.type" />业主 </label>
+        </form>
+        <div style="margin:20px auto 10px;width:65%">
+            <img src="images/register.png" style="width: 100%;">
+        </div>
+        <div style="text-align: right;margin: 10px 30px 30px;"><span ng-click="main.pageJump('indexczl')" style="color: #F25225;">上传业主资料（选填）></span></div>
+        <div style="width: 80%;margin:5% 12% !important">
+            <a class="zhuc2" ng-click="register(obj)">注册</a>
+            <a class="dengl2" ng-click="main.pageJump('login')">登录</a>
+        </div>
+    </ion-content>
+    <style type="text/css">
+    .djlsp2 {
+        margin: 33% auto 10%;
+        width: 160px;
+    }
+    
+    .zhuc2 {
+        padding: 10px 40px;
+        margin: 4%;
+        border-radius: 20px;
+        width: 100px;
+        background-color: #DA251D;
+        color: #FCF0F0
+    }
+    
+    .dengl2 {
+        border: 1px solid white;
+        padding: 10px 40px;
+        margin: 18px;
+        border-radius: 20px;
+        color: #FCF0F0
+    }
+    
+    .yanzm {
+        font-size: 12px;
+        height: 25px;
+        padding: 3px 0px 0px 15px;
+        border-left: 1px solid #fff;
+        color: #fff;
+    }
+    </style>
+</ion-view>

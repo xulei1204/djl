@@ -1,0 +1,107 @@
+<!-- 点就乐 头像-->
+<div class="bar bar-header bar-positive" ng-if="main.routeAttrs.headType=='index'" ng-init="keyword=''">
+    <button class="button button-icon back-button mt-5" style="position: absolute;" ng-click="main.pageJump('djldw')"> <i>南京</i> </button>
+    <div class="item-input-inset mt20 text-center" style="width: 75%;margin: 0px auto;background-color: #FFF;border-radius: 16px;height: 30px;">
+        <div class="item-input-wrapper" style="background-color: white; color:#fff;"> <i class="icon icon-sydz placeholder-icon light fize18"></i>
+            <input type="search" style=" width:90% !important" placeholder="请输入您需要的信息" ng-model="keyword">
+            <i class="icon ion-ios-search" style="color: #999999" ng-click="main.pageJump('search',{'keyword':keyword})"></i>
+        </div>
+    </div>
+    <img ng-click="main.pageJump('mzhzl')" src="images/tx02.jpg" style="width:30px; height:30px;border-radius: 60px;position: absolute;right: 10px;top: 25px;">
+</div>
+<!-- 首页 -->
+<div class="bar bar-header bar-positive" ng-if="main.routeAttrs.headType=='shouye'">
+    <h1 class="title white">
+        {{main.routeAttrs.title}}</h1>
+</div>
+<!-- simple -->
+<div class="bar bar-header bar-positive" ng-if="main.routeAttrs.headType=='simple'">
+    <button class="button button-icon back-button" ng-click="main.backRoute()"> <i class="icon ion-ios-arrow-left light"></i> </button>
+    <h1 class="title white">
+        {{main.routeAttrs.title}}</h1>
+</div>
+<!-- 分享1 分享 -->
+<div class="bar bar-header bar-positive" ng-if="main.routeAttrs.headType=='share'">
+    <button class="button button-icon back-button" ng-click="main.backRoute()"> <i class="icon ion-ios-arrow-left light"></i> </button>
+    <h1 class="title white fize16"><img ng-src="{{main.routeAttrs.pic|httpNoImg}}" class="prp"></img>{{main.routeAttrs.title}}</h1>
+    <button class="button button-icon" ng-click="main.backRoute()"><img src="images/share_btn.png" style="width: 18px;position: absolute;right: 8px;bottom: 20px;"> </button>
+</div>
+<!-- 分享2 ••• -->
+<div class="bar bar-header bar-positive" ng-if="main.routeAttrs.headType=='share2'">
+    <button class="button button-icon back-button" ng-click="main.backRoute()"> <i class="icon ion-ios-arrow-left light"></i> </button>
+    <h1 class="title white fize16">< ng-src="{{main.routeAttrs.pic}}" class="prp" />{{main.routeAttrs.title}}</h1>
+<button class="button button-icon back-button" ng-click="main.pageJump('Pubjxq')"> <i class="light "></i> ••• </button>
+</div>
+<!-- + -->
+<div class="bar bar-header bar-positive" ng-if="main.routeAttrs.headType=='add'">
+    <button class="button button-icon back-button" ng-click="main.backRoute()"> <i class="icon ion-ios-arrow-left light"></i> </button>
+    <h1 class="title white">{{main.routeAttrs.title}}</h1>
+    <button class="button button-icon back-button" ng-click="main.pageJump('mtjyhk')"> <i class="icon ion-android-add light"></i> </button>
+</div>
+<div class="bar bar-header bar-positive" ng-if="main.routeAttrs.headType=='fabu'">
+    <h1 class="title white">{{main.routeAttrs.title}}</h1>
+    <button class="button button-icon back-button" ng-click="main.pageJump('Pufbxx')"><img src="images/add_fabu.png" style="width: 20px;position: relative;bottom: 2px;"> </button>
+</div>
+<!-- 设置 -->
+<div class="bar bar-header bar-positive" ng-if="main.routeAttrs.headType=='shezhi'">
+<button class="button button-icon back-button" ng-click="main.backRoute()"> <i class="icon ion-ios-arrow-left light"></i> </button>
+    <h1 class="title white">{{main.routeAttrs.title}}</h1>
+    <button class="button button-icon back-button" ng-click="main.pageJump('Pufbxx')"><img src="images/set.png" style="width: 20px;position: relative;bottom: 2px;"> </button>
+</div>
+<!-- 完成 -->
+<div class="bar bar-header bar-positive" ng-if="main.routeAttrs.headType=='finish'">
+    <h1 class="title white">{{main.routeAttrs.title}}</h1>
+    <button class="button button-icon back-button mt-5" style="position: absolute;" ng-click="main.pageJump('generalMine')"> <i>完成</i> </button>
+</div>
+
+
+
+
+<div class="tabs tabs-icon-top" ng-if="main.showTabs && main.tabsType == 'user'">
+    <a class="tab-item" ng-class="{true:'assertive'}[main.tabsName=='index']" ng-click="main.cutTab('index','index')">
+        <i class="icon icon-footer01"></i> 首页
+    </a>
+    <a class="tab-item" ng-class="{true:'assertive'}[main.tabsName=='djl']" ng-click="main.cutTab('djl','djl')">
+        <i class="icon icon-footer02"></i> 点就乐
+    </a>
+    <a class="tab-item" ng-class="{true:'assertive'}[main.tabsName=='news']" ng-click="main.cutTab('news','news')">
+        <i class="icon ion-ios-paper-outline"></i> 资讯
+    </a>
+    <a class="tab-item" ng-class="{true:'assertive'}[main.tabsName=='generalMine']" ng-click="main.cutTab('generalMine','generalMine')">
+        <i class="icon icon-footer04"></i> 我的
+    </a>
+</div>
+<div class="tabs tabs-icon-top" ng-if="main.showTabs && main.tabsType == 'proprietor'">
+    <a class="tab-item" ng-class="{true:'assertive'}[main.tabsName=='domain']" ng-click="main.cutTab('domain','domain')">
+        <i class="icon icon-yzsj"></i>我的地盘
+    </a>
+    <a class="tab-item" ng-class="{true:'assertive'}[main.tabsName=='Published']" ng-click="main.cutTab('Published','Published')">
+        <i class="icon icon-yzfb"></i>我的发布
+    </a>
+    <a class="tab-item" ng-class="{true:'assertive'}[main.tabsName=='ownerMine']" ng-click="main.cutTab('ownerMine','ownerMine')">
+        <i class="icon icon-footer04"></i>管理中心
+    </a>
+</div>
+<ion-tabs class="tabs-item-hide" delegate-handle="mainTabs" ng-init="main.interface()">
+    <ion-tab>
+        <ion-nav-view name="index"></ion-nav-view>
+    </ion-tab>
+    <ion-tab>
+        <ion-nav-view name="djl"></ion-nav-view>
+    </ion-tab>
+    <ion-tab>
+        <ion-nav-view name="news"></ion-nav-view>
+    </ion-tab>
+    <ion-tab>
+        <ion-nav-view name="ownerMine"></ion-nav-view>
+    </ion-tab>
+    <ion-tab>
+        <ion-nav-view name="domain"></ion-nav-view>
+    </ion-tab>
+    <ion-tab>
+        <ion-nav-view name="generalMine"></ion-nav-view>
+    </ion-tab>
+    <ion-tab>
+        <ion-nav-view name="Published"></ion-nav-view>
+    </ion-tab>
+</ion-tabs>

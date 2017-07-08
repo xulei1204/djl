@@ -1,0 +1,50 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header ma20" >
+        <page-plugin  refresher="" page-load="commentList(json)" infinite-scroll="" page-data="list"  handle="comment_handle">
+        <div class="list">
+            <a class="item item-thumbnail-left" href="#" style="padding-left: 80px !important; " ng-repeat="x in list">
+                <img ng-src="{{x.pic|httpNoImg}}" class="perp">
+                <h2 class="fize16">{{x.nickname}}</h2>
+                <h3 class="date-time">{{x.time}}</h3>
+                <p class=" mt20">{{x.content}}</p>
+            </a>
+            <div style="text-align: center;padding-top: 50px" ng-if="list.length==0">暂无评论</div>
+        </div>
+        </page-plugin>
+
+    </ion-content>
+    <div class=" mt24 input1">
+        <input type="text" style="margin:0% !important;width: 100%;padding:0 2% !important;" placeholder="写下您的评论" ng-model="content">
+        <button class="comment-btn button button-assertive" ng-click="submitComment()">提交{{content}}</button>
+    </div>
+    <style type="text/css">
+        .perp {
+            border-radius: 30px;
+            width: 50px !important;
+            height: 50px !important;
+        }
+
+        .date-time {
+            margin: 5px 0px !important;
+            size: 14px;
+            color: #9B9B9B;
+        }
+
+        .comment {
+            margin-top: 20px !important;
+            color: #797979;
+        }
+
+        .input1 {
+            background-color: #F5F5F5;
+            width: 100%;
+            border-radius: 5px;
+            height: 45px;
+            position: absolute;
+            bottom: 0px;
+            z-index: 999;
+            padding:0 20px;
+        }
+    </style>
+    </ion-view>
+

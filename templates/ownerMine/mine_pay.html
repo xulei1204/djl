@@ -1,0 +1,55 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header table-bg">
+        <label class="item item-input mt10">
+            <span class="input-label" style="width: 20% !important">金额（元）</span>
+            <input type="text" placeholder="请输入充值金额">
+        </label>
+        <div style="height: 6%;padding: 2% 4%;">支付方式</div>
+        <form>
+            <div class="payarea" "><img src="images/share02.png" class="images">
+                <label class="label1" ">微信支付</label>
+                <input class="radio1" type="radio" name="paytype" />
+            </div>
+            <div class="payarea" "><img src="images/zfb.jpg" class="images">
+                <label class="label1" ">微信支付</label>
+                <input class="radio1" type="radio" name="paytype" />
+            </div>
+            <div class="payarea" "><img src="images/ll.png" class="images">
+                <label class="label1" ">微信支付</label>
+                <input class="radio1" type="radio" name="paytype" />
+            </div>
+        </form>
+            <a class="item item-icon-right p5 pl15 mt10" ng-click="main.pageJump('matxfpxx')">
+            <input type="text" placeholder="请填写发票（选填）"> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+            <a class="item item-icon-right p5 pl15" ng-click="main.pageJump('madzgl')">
+            <input type="text" style="width: 160px;" placeholder="选择收发票地址（选填）"> <i class="icon ion-ios-arrow-right fize20 right0"></i> </a>
+            <button class="button w-90 button-positive bth40 jz fize16 bor5" style="background-color: #DA251C;color:#FAE9E8;margin-top: 50px !important"  onClick="location.href='#'">确定</button>
+    </ion-content>
+</body>
+<style type="text/css">
+.payarea {
+    height: 8%;
+    background-color: #FFF;
+    position: relative;
+    border-bottom: 1px solid #E9E9E9;
+}
+
+.images {
+    width: 9%;
+    margin: 2% 3%;
+}
+
+.label1 {
+    position: absolute;
+    left: 14%;
+    top: 30%;
+}
+
+.radio1 {
+    position: absolute;
+    right: 2%;
+    width: 5%;
+    height: 100%;
+}
+</style>
+</ion-view>

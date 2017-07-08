@@ -1,0 +1,40 @@
+<ion-view>
+    <style type="text/css">
+    .choujbg {
+        width: 100%;
+        margin: 64px 0 20px;
+        height: 100%;
+        background-image: url(images/red_bg.jpg);
+        background-size: 100%;
+    }
+    
+    .chak {
+        padding: 5px 0px 5px 88px;
+        font-size: 12px;
+        font-family: simHei;
+    }
+    
+    .zhongj {
+        float: right;
+        margin-right: 10px;
+        color: #E15C27;
+    }
+    
+    .djcj {
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 59%;
+    }
+    </style>
+    <div class="choujbg" ng-init="ctrl.prizeIndex()">
+        <div class="pro">
+            <img src="{{ctrl.indexPic|httpNoImg}}" style="width: 100%; margin: auto;">
+        </div>
+        <div class="chak"><a ng-click="main.pageJump('about',{'aboutId':4})">查看抽奖规则&nbsp</a><i class="icon ion-chevron-right"></i>
+            <a class="zhongj" ng-click="main.pageJump('pzjhg')">中奖回顾</a></div>
+        <div class="djcj">
+            <a ng-click="main.pageJump('pmycj')"><img src="images/cj_btn.png" style="width: 80px"></a>
+        </div>
+    </div>
+</ion-view>

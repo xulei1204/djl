@@ -1,0 +1,43 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header" >
+        <div class="ma10 mb10" style="background-color: white;min-height: 160px;position: relative;">
+            <textarea class="textarea" placeholder="请填写您的宝贵意见" ng-model="ctrl.content"></textarea>
+            <div class="area1">
+                <div class="area2"><img src="images/add_pic.png" style="width: 25px;height: 25px;"  onclick="javascript:$('#image').click()">
+                </div>
+                <input style="display:none" onChange="angular.element(this).scope().img_upload(this.files)"  type="file"  id="image">
+
+            </div>
+
+        </div>
+        <div class="ml10"> <a  ng-repeat="x in ctrl.imgArr track by $index">
+            <img id="image{{$index}}" ng-src="{{x}}" width="80" height="80" class="mt10"
+                 style="border:1px dashed #ddd;" ng-click="ctrl.removeImg($index)"><br ng-if="$index!=0&&($index+1)%4==0"></a></div>
+
+        <button class="button w-90 button-positive bth40 jz fize16 bor5" style="background-color: #DA251C;color:#FAE9E8;margin-top: 50px !important" ng-click="ctrl.submitFeedback()">提交</button>
+    </ion-content>
+    <style type="text/css">
+        .area1 {
+            background-color: #FFF;
+            margin-top: 10px;
+            padding: 10px 14px;
+            position: absolute;
+            bottom: 0px;
+        }
+
+        .area2 {
+            padding: 9px 9px;
+            width: 45px;
+            height: 45px;
+            border: 1px solid #E2E2E2;
+        }
+
+        .textarea {
+            width: 100%;
+            padding: 10px !important;
+            height: 20%;
+        }
+    </style>
+</ion-view>
+
+

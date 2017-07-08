@@ -1,0 +1,24 @@
+<ion-view>
+    <ion-content class="scroll-content ionic-scroll  has-header table-bg">
+        <div class="tab light-bg mb10">
+            <ul>
+                <li class="fize15"  ng-click="ctrl.changeTab(2)" ng-class="{true:'hover'}[ctrl.type==2]">常见问题</li>
+                <li class="fize15 " ng-click="ctrl.changeTab(3)" ng-class="{true:'hover'}[ctrl.type==3]">全部问题</li>
+                <li class="fize15" ng-click="ctrl.changeTab(1)" ng-class="{true:'hover'}[ctrl.type==1]">我的反馈</li>
+            </ul>
+        </div>
+        <page-plugin refresher="" page-load="ctrl.showQuestionList(json)" infinite-scroll="" page-data="ctrl.list"  handle="question_handle">
+          <a ng-if="x.memberId==null" class="item item-icon-left pr10 b0 m0 bdbt90 item-icon-right" ng-click="main.pageJump('questionDetail',{'questionId':x.id})" ng-repeat="x in ctrl.list track by $index">
+        <i class="icon icon-address-a fize16">{{x.title}}</i>
+        <span style="color:#999; height:36px; float:right"> </span>
+        <i class="icon ion-ios-arrow-right fize16"></i>
+        </a>
+            <a ng-if="x.memberId!=null" class="item item-icon-left pr10 b0 m0 bdbt90 item-icon-right" ng-click="main.pageJump('feedbackDetail',{'id':x.id})" ng-repeat="x in ctrl.list track by $index">
+                <i class="icon icon-address-a fize16">{{x.content}}</i>
+                <span style="color:#999; height:36px; float:right"> </span>
+                <i class="icon ion-ios-arrow-right fize16"></i>
+            </a>
+        </page-plugin>
+
+    </ion-content>
+</ion-view>

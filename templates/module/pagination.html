@@ -1,0 +1,16 @@
+
+
+<ion-refresher ng-if="plugin.refresher"
+               on-refresh="loadMore(false)"
+
+> <!--pulling-icon="ion-demo"
+               refreshing-icon="ion-demo" pulling-text="下拉刷新..."-->
+</ion-refresher>
+<ng-transclude >
+
+</ng-transclude>
+<ion-infinite-scroll ng-if="plugin.infinite&&plugin.stopPage"
+                     on-infinite="loadMore(true)"
+                     immediate-check="false"
+                     distance="1%">
+</ion-infinite-scroll>
